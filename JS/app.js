@@ -11,31 +11,31 @@ createApp({
                     name: 'Michele'
                 },
                 {
-                    image: './assets/avatar_2.jpg',
+                    image: './assets/img/avatar_2.jpg',
                     name: 'Fabio'
                 },
                 {
-                    image: './assets/avatar_3.jpg',
+                    image: './assets/img/avatar_3.jpg',
                     name: 'Samuele'
                 },
                 {
-                    image: './assets/avatar_4.jpg',
+                    image: './assets/img/avatar_4.jpg',
                     name: 'Alessandro B.'
                 },
                 {
-                    image: './assets/avatar_5.jpg',
+                    image: './assets/img/avatar_5.jpg',
                     name: 'Alessandro L.'
                 },
                 {
-                    image: './assets/avatar_6.jpg',
+                    image: './assets/img/avatar_6.jpg',
                     name: 'Angela'
                 },
                 {
-                    image: './assets/avatar_7.jpg',
+                    image: './assets/img/avatar_7.jpg',
                     name: 'Giuseppe'
                 },
                 {
-                    image: './assets/avatar_8.jpg',
+                    image: './assets/img/avatar_8.jpg',
                     name: 'Francesco'
                 }
             ],

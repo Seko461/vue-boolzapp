@@ -46,9 +46,8 @@
                 <div class="list">
 
 
-                    <div v-for="contact in contacts" class="user d-flex">
-                        <img :src="contact.image" height="70" alt="" v-for="(contact, index) in contacts"
-                            @click="activeContact = index">
+                    <div v-for="(contact, index) in contacts" class="user d-flex" @click="activeContact = index">
+                        <img :src="contact.image" height="70" alt="">
                         <div class=" box_message">
                             <div class="name">
                                 <h2>{{contact.name}}</h2>
@@ -80,7 +79,7 @@
                     <img :src="contacts[activeContact].image" height="70">
                     <div class=" box_message">
                         <div class="name">
-                            <h2>Michele</h2>
+                            <h2>{{contacts[activeContact].name}}</h2>
                         </div>
                         <div class="preview">
                             <p> Lorem ipsum dolor sit. alle 16.30 </p>

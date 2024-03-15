@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
 
-
+            activeContact: 0,
             contacts: [
                 {
                     image: './assets/img/avatar_1.jpg',

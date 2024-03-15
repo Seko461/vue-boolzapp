@@ -232,9 +232,7 @@ p {
     font-weight: 400;
 }
 
-.received {
-    background-color: white;
-}
+
 
 .side {
     flex-direction: column;
@@ -256,6 +254,7 @@ p {
 
 .received {
     align-self: flex-start;
+    background-color: white;
 }
 
 .dropdown {

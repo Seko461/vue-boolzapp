@@ -169,8 +169,6 @@ createApp({
                 }
             ],
 
-            textSend: " lorem Lorem ipsum dolor sit amet",
-
         }
     }
 }).mount('#app')

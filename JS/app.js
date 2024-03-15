@@ -39,6 +39,9 @@ createApp({
                     name: 'Francesco'
                 }
             ],
+
+            textSend: " lorem Lorem ipsum dolor sit amet",
+
         }
     }
 }).mount('#app')

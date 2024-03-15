@@ -47,8 +47,9 @@
 
 
                     <div v-for="contact in contacts" class="user d-flex">
-                        <img :src="contact.image" height="70" alt="">
-                        <div class="box_message">
+                        <img :src="contact.image" height="70" alt="" v-for="(contact, index) in contacts"
+                            @click="activeContact = index">
+                        <div class=" box_message">
                             <div class="name">
                                 <h2>{{contact.name}}</h2>
                             </div>
@@ -76,8 +77,8 @@
         <div class="right ">
             <div class="top">
                 <div class="user d-flex">
-                    <img height="70" src="./assets/img/avatar_1.jpg" alt="">
-                    <div class="box_message">
+                    <img :src="contacts[activeContact].image" height="70">
+                    <div class=" box_message">
                         <div class="name">
                             <h2>Michele</h2>
                         </div>
@@ -96,12 +97,7 @@
             <div class="chat">
                 <div class="send">
                     <div class="text_message">
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quaerat et
-                        deserunt repudiandae corrupti doloremque ab
-                        quibusdam voluptatem necessitatibus inventore,
-                        corporis ratione officia ut vero quos nesciunt
-                        ipsa, molestiae porro praesentium!
+                        {{textSend}}
                     </div>
                     <div class="side d-flex">
                         <div class="dropdown">

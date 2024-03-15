@@ -94,10 +94,14 @@
                 </div>
             </div>
             <div class="chat">
-                <div v-for="message in contacts[activeContact]" class="sent">
-                    <div class="text_message">
-                        {{message}}
+                <div class="sent">
+                    <div v-for="messages" class="text_message">
+                        {{contacts[activeContact].messages[0]}}
+                        {{contacts[activeContact].messages[1]}}
+
+
                     </div>
+
                     <div class="side d-flex">
                         <div class="dropdown">
                             <input type="checkbox" id="checkbox-toggle-1">
@@ -113,12 +117,8 @@
                 </div>
                 <div class="received">
                     <div class="text_message">
-                        Lorem ipsum dolor sit amet, consectetur
-                        adipisicing elit. Quaerat et
-                        deserunt repudiandae corrupti doloremque ab
-                        quibusdam voluptatem necessitatibus inventore,
-                        corporis ratione officia ut vero quos nesciunt
-                        ipsa, molestiae porro praesentium!
+                        {{contacts[activeContact].messages[2]}}
+
                     </div>
                     <div class="side d-flex">
                         <div class="dropdown">

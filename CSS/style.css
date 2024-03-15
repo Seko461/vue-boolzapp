@@ -218,7 +218,7 @@ p {
     border-radius: 20px;
 }
 
-.send,
+.sent,
 .received {
     /* border: 1px solid black; */
     width: 60%;
@@ -245,7 +245,7 @@ p {
     color: var(--boolzapp-grey);
 }
 
-.send {
+.sent {
     align-self: flex-end;
     background-color: var(--boolzapp-secondary);
 }

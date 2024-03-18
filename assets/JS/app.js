@@ -3,8 +3,16 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            selectedContact: 0,
+            newMessage: "",
+            newReply: "",
+            newSearch: "",
+            checkPop: "",
+            dateTime: "",
+            searchInputText: '',
+            filteredContacts: [],
 
-            activeContact: 0,
+
             contacts: [
                 {
                     name: 'Michele',
@@ -167,8 +175,73 @@ createApp({
                         }
                     ],
                 }
-            ],
-
+            ]
         }
-    }
+    },
+    methods: {
+        clickContact(index) {
+            this.selectedContact = index;
+        },
+        getDate() {
+            const d = new Date();
+            let today = d.toLocaleDateString();
+            console.log(today);
+            return today;
+        },
+        getTime() {
+            const t = new Date();
+            let now = t.toLocaleTimeString();
+            console.log(now);
+            return now;
+        },
+        popUp(index) {
+            if (this.checkPop !== index) {
+                this.checkPop = index;
+                console.log(this.checkPop);
+            } else {
+                this.checkPop = -1
+                console.log(this.checkPop);
+            }
+        },
+        deleteMsg(index) {
+            this.contacts[this.selectedContact].messages.splice(index, 1)
+            this.checkPop = -1
+        },
+        addReply() {
+            const newMsg = {
+                date: this.getDate() + ' ' + this.getTime(),
+                message: "ok",
+                status: 'received'
+            }
+            this.contacts[this.selectedContact].messages.push(newMsg);
+        },
+        addMessage() {
+            const nMsg = {
+                date: this.getDate() + ' ' + this.getTime(),
+                message: this.newMessage,
+                status: 'sent'
+            }
+            if (this.newMessage.trim() !== "") {
+                this.contacts[this.selectedContact].messages.push(nMsg);
+                this.newMessage = "";
+                this.newReply = setTimeout(this.addReply, 1000);
+            }
+        },
+        searchContact() {
+            this.contacts.forEach((element, i) => {
+                if (this.contacts[i].name.toLowerCase().includes(this.newSearch.toLowerCase())) {
+                    this.contacts[i].visible = true;
+                    console.log('Visible');
+                } else {
+                    this.contacts[i].visible = false;
+                    console.log('Not-Visible');
+
+                }
+            });
+        },
+
+    },
+
 }).mount('#app')
+
+
